@@ -1,4 +1,4 @@
-# NEXT
+# Learning NEXT.js and TypeScript 
 
 ### Overview
 
