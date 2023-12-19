@@ -16,4 +16,4 @@
 
 ### Creating a NEXT app
 
-```npx create-next-app [app name]```
+```npx create-next-app@latest [app name]```
