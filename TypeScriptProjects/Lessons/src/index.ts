@@ -32,6 +32,3 @@ let something: null
 let anotherThing: undefined
 
 // As these two are defined as such they could only ever be either Null or Undefined respectively.
-
-
-// Arrays:

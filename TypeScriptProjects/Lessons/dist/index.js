@@ -22,4 +22,3 @@ let isLarge = false;
 let something;
 let anotherThing;
 // As these two are defined as such they could only ever be either Null or Undefined respectively.
-// Arrays:
