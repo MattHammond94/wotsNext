@@ -12,6 +12,8 @@
 //   error?: { message: string }
 // }
 
+// NOTE - This only works for a literal type. It will not work on a generic type. 
+
 type LoadingLocationState = {
   state: "Loading"
 }

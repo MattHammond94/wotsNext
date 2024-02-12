@@ -1,12 +1,5 @@
 "use strict";
-// =====================================
-// ORIGINAL LOCATION STATE:
-//  MESSY:
-// type LocationState = {
-//   state: "Loading" | "Success" | "Error"
-//   coords?: { lat: number; lon: number }
-//   error?: { message: string }
-// }
+// DISCRIMINATING UNIONS:
 function printLocation(location) {
     switch (location.state) {
         case "Loading":
