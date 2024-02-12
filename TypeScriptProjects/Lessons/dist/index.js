@@ -1,12 +1,12 @@
 "use strict";
 // TYPE INFERENCE:
-let age = 33;
+let age = 30;
 console.log(age);
 // Although the above does look like ordinary JS - TypeChecking is happening under the hood.
 // As age has been defined as a number TYPE we would not be able to change the age value later on. 
 // If we di not explicity define the TYPE - TypeScript will automatically assign the TYPE value - This is called TYPE INFERENCE
 // TYPE ANNOTATTION: 
-let ageTwo = 45;
+let ageTwo = 40;
 console.log(ageTwo);
 // Type annotation we explicitly declare the TYPE of a value.
 //  INFERENCE:
@@ -22,3 +22,4 @@ let isLarge = false;
 let something;
 let anotherThing;
 // As these two are defined as such they could only ever be either Null or Undefined respectively.
+// Arrays:
