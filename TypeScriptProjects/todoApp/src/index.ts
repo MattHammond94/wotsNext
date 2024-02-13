@@ -7,8 +7,6 @@ type Todo = {
   createdAt: Date
 }
 
-const todos: Todo[] = []
-
 // console.log(uuidv4());
 // console.log('Hello World');
 
@@ -26,6 +24,9 @@ const input = document.querySelector<HTMLInputElement>('#new-todo-title');
 // Other selectors/functions will not be able to use a Generic syntax.
 // getElementByID can be used with the as keyword to specify what type of element we should be getting when getting an element by Id:
 const form = document.getElementById("new-todo-form") as HTMLFormElement | null
+
+const todos: Todo[] = loadTodos();
+todos.forEach(addListItem)
 
 form?.addEventListener("submit", e => {
   e.preventDefault();
@@ -49,12 +50,15 @@ function addListItem(task: Todo) {
   const item = document.createElement("li")
   const label = document.createElement("label")
   const checkBox = document.createElement("input")
+
+  // Everytime a change takes place we save to LS.
   checkBox.addEventListener("change", () => {
     task.completed = checkBox.checked
     console.log("todos")
 
     saveTodos();
   })
+
   checkBox.type = "checkbox"
   checkBox.checked = task.completed
   label.append(checkBox, task.title)
@@ -64,4 +68,10 @@ function addListItem(task: Todo) {
 
 function saveTodos() {
   localStorage.setItem("TODOS", JSON.stringify(todos)); 
+}
+
+function loadTodos(): Todo[] {
+  const todoJSON = localStorage.getItem("TODOS")
+  if (todoJSON == null) return []
+  return JSON.parse(todoJSON)
 }
