@@ -34,6 +34,8 @@ Creates a tsconfig json file in selected directory.
 
 > If you plan on using packages/modules in your program you will notice an issue when using ES6 imports. To resolve this, in the TS config file you can change the ```module``` setting from commonJS to ```es6```
 
+> Some packages will not have been built using types therefore you may have errors being returned from the use of said packages. You can resolve this either by Emitting such errors or by locating and installing a suitable types package supported by the selected module.
+
 Once done you will need to run ```tsc``` each time you need to re compile your TS files.
 
 alternatively you can run ```tsc --watch``` to open a terminal which will re compile each time a file is changed and saved.
