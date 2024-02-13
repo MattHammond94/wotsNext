@@ -51,7 +51,7 @@ const somethingOne: Something = {
 }
 
 // If the above is done using types however an error will be declared.
-// This prevents potential issues whereby you declare two of the same interface and extend its properties by accident.
+// This prevents potential issues whereby you declare two of the same interface and extend/OVERRIDE its properties by accident.
 
 
 type UserType = {
