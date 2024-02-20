@@ -40,14 +40,17 @@ const addUID4 = (obj) => {
     let uid = Math.floor(Math.random() * 100);
     return Object.assign(Object.assign({}, obj), { uid });
 };
+// This doc takes an object as its data type for the "data" attribute
 const doc = {
     uid: 1,
     resourceName: 'Name',
     data: { name: 'someData' }
 };
+// This doc takes an array of strings for its "data" type attribute
 const anotherDoc = {
     uid: 2,
     resourceName: 'doc with array for data',
     data: ['One', 'Two', "Three"]
 };
+// Both docs use the Resource interface but with different data types for the data attribute.
 console.log(doc, anotherDoc);

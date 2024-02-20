@@ -77,16 +77,20 @@ interface Resource<T> {
   data: T;
 }
 
+// This doc takes an object as its data type for the "data" attribute
 const doc: Resource<object> = {
   uid: 1,
   resourceName: 'Name',
   data: { name: 'someData' }
 }
 
+// This doc takes an array of strings for its "data" type attribute
 const anotherDoc: Resource<string[]> = {
   uid: 2,
   resourceName: 'doc with array for data',
   data: ['One', 'Two', "Three"]
 }
+
+// Both docs use the Resource interface but with different data types for the data attribute.
 
 console.log(doc, anotherDoc);
