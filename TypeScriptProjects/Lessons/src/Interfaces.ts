@@ -32,8 +32,21 @@ const anotherPost = {
   author: authorOne
 }
 
+// ================================
+// Function interfaces:
 
-// As function arg types:
+interface MathFunc {
+  (x: number, y: number): number 
+}
+
+// We can use the same defined interface above to define multiple functions that have the same arg values/return values
+const add: MathFunc = (x: number, y: number): number => x + y
+const sub: MathFunc = (x: number, y: number): number => x - y
+
+console.log(`This is our MATHFUNC being used to subtract: ${sub(10, 5)}`);
+console.log(`This is our MATHFUNC being used to add: ${add(10, 5)}`);
+
+// An interface as a function argument types:
 
 function createPost(post: Post): void {
   console.log(`Created post: ${post.title} by ${post.author.name}`);
